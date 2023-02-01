@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    display: grid;
+    grid-area: h;
+    text-align: center;
+}
+article{
+    display: grid;
+    grid-area: a;
+    padding: 10px;
+    background-color: aqua;
+    text-align: center;
+}
+
+#gomb{
+    margin: auto;
+}
+main{
+    margin: auto;
+    width: 50%;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas:   "h h"
+                           "a a"
+}
+@media screen and (max-width: 600px){
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: "h"
+                             "a";
+    }
+    article{
+        background-color: black;
+        color: white;
+    }
+    label, input{
+        float: left;
+    }
+
+}
